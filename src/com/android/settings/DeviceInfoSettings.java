@@ -30,6 +30,7 @@ import android.preference.Preference;
 import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
+import android.telephony.MSimTelephonyManager;
 import android.util.Log;
 
 import java.io.BufferedReader;
@@ -71,6 +72,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
     private static final String KEY_EQUIPMENT_ID = "fcc_equipment_id";
     private static final String PROPERTY_EQUIPMENT_ID = "ro.ril.fccid";
     private static final String KEY_CM_UPDATES = "cm_updates";
+    private static final String KEY_STATUS = "status_info";
 
     long[] mHits = new long[3];
 
@@ -113,12 +115,18 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
         removePreferenceIfPropertyMissing(getPreferenceScreen(), "safetylegal",
                 PROPERTY_URL_SAFETYLEGAL);
 
+		   
+        if (MSimTelephonyManager.getDefault().isMultiSimEnabled()) {
+            findPreference(KEY_STATUS).getIntent().setClassName(
+                    "com.android.settings","com.android.settings.deviceinfo.MSimStatus");
+        }
         // Remove Equipment id preference if FCC ID is not set by RIL
         removePreferenceIfPropertyMissing(getPreferenceScreen(), KEY_EQUIPMENT_ID,
                 PROPERTY_EQUIPMENT_ID);
 
         // Remove Baseband version if wifi-only device
-        if (Utils.isWifiOnly(getActivity())) {
+        if (Utils.isWifiOnly(getActivity()) ||
+                (MSimTelephonyManager.getDefault().isMultiSimEnabled())) {
             getPreferenceScreen().removePreference(findPreference(KEY_BASEBAND_VERSION));
         }
 

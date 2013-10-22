@@ -1755,6 +1755,53 @@
     <string name="cell_broadcast_settings" msgid="8415582011920085222">"小区广播"</string>
     <string name="cell_broadcast_settings_summary" msgid="3301339398950905913">"请选择要显示的紧急消息类型。"</string>
 
+    <!-- Multi Sim Settings screen, Select Sub label -->
+    <string name="sel_sub_title">配置SIM卡</string>
+    <!-- Multi Sim Settings screen, Select Sub Summary label -->
+    <string name="sel_sub_summary">选择卡[1]和卡[2]</string>
+    <!-- Select Subscription screen title -->
+    <string name="select_subscription">选择SIM卡</string>
+
+    <!-- Main settings screen, Multi Sim settings title for item to go into the Multi settings -->
+    <string name="multi_sim_settings_title">双卡设置</string>
+    <!-- Main settings screen, Multi Sim settings summary for item to go into Multi settings -->
+    <string name="multi_sim_settings_summary">建立多SIM卡设置为语音，数据和短信</string>
+
+    <!-- Multi Sim Settings screen, Voice box label -->
+    <string name="voice_title">默认功能使用SIM卡</string>
+    <!-- Multi Sim Settings screen, Voice Summary label -->
+    <string name="voice_summary">为语音电话选择SIM卡</string>
+
+    <!-- Multi Sim Settings screen, Data box label -->
+    <string name="data_title">电话</string>
+    <!-- Multi Sim Settings screen, Voice Summary label -->
+    <string name="data_summary">选择拨打电话SIM卡</string>
+
+    <!-- Multi Sim Settings screen, SMS box label -->
+    <string name="sms_title">短信</string>
+    <!-- Multi Sim Settings screen, Voice Summary label -->
+    <string name="sms_summary">选择发送短信的SIM卡</string>
+
+    <!-- Multi Sim Settings screen, Set DDS progress dialog message -->
+    <string name="set_data_subscription_progress">集数据服务在进步</string>
+    <!-- Multi Sim Settings screen, Set DDS success message -->
+    <string name="set_dds_success">集数据服务的成功</string>
+    <!-- Multi Sim Settings screen, Set DDS failure message -->
+    <string name="set_dds_failed">集数据服务中的错误。清理所有现有的数据连接，然后再试一次。</string>
+    <!-- Multi Sim Settings screen, Set DDS error message -->
+    <string name="set_dds_error">错误。</string>
+    <!-- Multi Sim Settings screen, Set SMS error message -->
+    <string name="set_sms_error">错误在设置短信订阅。认购不活跃。</string>
+    <!-- Multi Sim Settings screen, Set VOICE error message -->
+    <string name="set_voice_error">错误设定的语音订阅。认购不活跃。</string>
+
+    <string name="device_additional_status">状态信息</string> <!-- In About phone->Status screen, title of the item to go into the subscription status screen -->   
+
+    <string name="subscription_01_title">卡 1</string>
+    <string name="subscription_01_summary">卡1网络设置</string>
+    <string name="subscription_02_title">卡 2</string>
+    <string name="subscription_02_summary">卡2网络设置</string>
+
    <!-- CYANOGENMOD EDITS START -->
 
     <!-- Wifi sleep timeout -->
